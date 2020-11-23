@@ -12,11 +12,11 @@ import { Link } from "react-router-dom";
 
 export const MainContent = () => {
   return (
-    <>
+    <div className="container">
       <div className="heading">
         <h1>Our Favorites</h1>
       </div>
-      <div className="Content container">
+      <div className="Content">
         <div className="Product1">
           <div className="front">
             <img src={Image} alt="product" />
@@ -183,6 +183,6 @@ export const MainContent = () => {
       <div className="ads">
         <img src={Ad} alt="Advertisement" />
       </div>
-    </>
+    </div>
   );
 };

@@ -1,13 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import MaterialIcon from "material-icons-react";
 
-import { Link } from "react-router-dom";
 import { Header } from "./Header";
 import { NavigationBar } from "./NavigationBar";
 import { Footer } from "./Footer";
 import Product from "../images/Champagne.png";
 import { ProductTab } from "./Tabs";
 import { ProductCarousel } from "./ProductCarousel";
+import { useDispatch, useSelector } from "react-redux";
+import { ADD, REMOVE } from "./Redux/Action";
 
 const HR = ({ color }) => (
   <hr
@@ -19,11 +20,19 @@ const HR = ({ color }) => (
   />
 );
 export const Products = () => {
+  const value = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const AddToCart = () => {
+    dispatch(ADD());
+  };
+  const RemoveFromCart = () => {
+    dispatch(REMOVE());
+  };
   return (
     <div>
       <div>
         <Header />
-        <NavigationBar />
+        <NavigationBar Value={value} />
         <div className="container">
           <div className="product-item">
             <div className="product-image">
@@ -64,9 +73,13 @@ export const Products = () => {
                     500.0ml bottle - <strong>from $250.49</strong>
                   </label>
                 </div>
-                <Link to="/Booking" className="btn">
+                <button onClick={AddToCart} className="btn">
                   Add To Cart
-                </Link>
+                </button>
+
+                <button onClick={RemoveFromCart} className="btn">
+                  Remove
+                </button>
               </div>
             </div>
           </div>

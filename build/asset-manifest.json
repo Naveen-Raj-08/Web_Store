@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.641f1948.chunk.css",
-    "main.js": "/static/js/main.ea863568.chunk.js",
-    "main.js.map": "/static/js/main.ea863568.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d40d3b2b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d40d3b2b.js.map",
+    "main.css": "/static/css/main.b3a7fe44.chunk.css",
+    "main.js": "/static/js/main.2b0b7671.chunk.js",
+    "main.js.map": "/static/js/main.2b0b7671.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.75ed6431.js",
+    "runtime-main.js.map": "/static/js/runtime-main.75ed6431.js.map",
     "static/css/2.a4a49722.chunk.css": "/static/css/2.a4a49722.chunk.css",
-    "static/js/2.b2745fa5.chunk.js": "/static/js/2.b2745fa5.chunk.js",
-    "static/js/2.b2745fa5.chunk.js.map": "/static/js/2.b2745fa5.chunk.js.map",
-    "static/js/3.18498d80.chunk.js": "/static/js/3.18498d80.chunk.js",
-    "static/js/3.18498d80.chunk.js.map": "/static/js/3.18498d80.chunk.js.map",
+    "static/js/2.45cc3deb.chunk.js": "/static/js/2.45cc3deb.chunk.js",
+    "static/js/2.45cc3deb.chunk.js.map": "/static/js/2.45cc3deb.chunk.js.map",
+    "static/js/3.14cb52a5.chunk.js": "/static/js/3.14cb52a5.chunk.js",
+    "static/js/3.14cb52a5.chunk.js.map": "/static/js/3.14cb52a5.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.a4a49722.chunk.css.map": "/static/css/2.a4a49722.chunk.css.map",
-    "static/css/main.641f1948.chunk.css.map": "/static/css/main.641f1948.chunk.css.map",
-    "static/js/2.b2745fa5.chunk.js.LICENSE.txt": "/static/js/2.b2745fa5.chunk.js.LICENSE.txt",
+    "static/css/main.b3a7fe44.chunk.css.map": "/static/css/main.b3a7fe44.chunk.css.map",
+    "static/js/2.45cc3deb.chunk.js.LICENSE.txt": "/static/js/2.45cc3deb.chunk.js.LICENSE.txt",
     "static/media/Advertisement.86f9afb7.jpg": "/static/media/Advertisement.86f9afb7.jpg",
     "static/media/App.css": "/static/media/Roboto-Black.1224b64c.ttf",
     "static/media/Backardi.753c0a52.png": "/static/media/Backardi.753c0a52.png",
@@ -25,10 +25,10 @@
     "static/media/heineken.6579b0d6.png": "/static/media/heineken.6579b0d6.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d40d3b2b.js",
+    "static/js/runtime-main.75ed6431.js",
     "static/css/2.a4a49722.chunk.css",
-    "static/js/2.b2745fa5.chunk.js",
-    "static/css/main.641f1948.chunk.css",
-    "static/js/main.ea863568.chunk.js"
+    "static/js/2.45cc3deb.chunk.js",
+    "static/css/main.b3a7fe44.chunk.css",
+    "static/js/main.2b0b7671.chunk.js"
   ]
 }
