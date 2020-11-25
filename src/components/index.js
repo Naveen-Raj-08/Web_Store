@@ -4,9 +4,9 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { NavigationBar } from "./NavigationBar";
 import { VideoParallax } from "./VideoParallax";
-import { MainContent } from "./MainContent";
 import { BottomParallax } from "./BottomParallax";
 import { About } from "./About";
+import ProductList from "./ProductList";
 
 export const index = () => {
   return (
@@ -14,7 +14,7 @@ export const index = () => {
       <Header />
       <NavigationBar />
       <VideoParallax />
-      <MainContent />
+      <ProductList />
       <BottomParallax />
       <About />
       <Footer />

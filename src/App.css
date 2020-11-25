@@ -351,384 +351,81 @@
   padding: 15px 0px;
   margin: 30px 0px;
 }
-.Content {
+.row {
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  grid-template-areas:
-    "Product1 Product2 Product3"
-    "Product4 Product5 Product6";
-  grid-template-rows: repeat(2, 400px);
-  grid-column-gap: 8px;
-  grid-row-gap: 20px;
-  margin: 10px 5px;
-  background-color: white;
+  grid-template-areas: "Product Product Product";
+  grid-gap: 20px;
+  padding: 10px 0px;
 }
-.Content .Product1 {
-  grid-area: Product1;
+.Content {
+  grid-area: Product;
 }
-.Content .Product1 > .front {
-  position: absolute;
-  transform: perspective(600px) rotateY(0deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
+.Product {
+  background-color: transparent;
+  width: 360px;
+  height: 500px;
+  perspective: 1000px;
 }
-.Content .Product1 > .front > img {
-  max-width: 100%;
+
+.Product-inner {
+  position: relative;
   width: 100%;
-}
-.Content .Product1 > .back {
-  position: absolute;
-  transform: perspective(600px) rotateY(180deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
+  height: 100%;
   text-align: center;
-  width: 370px;
-  height: 400px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
-.Content .Product1 > .back > .heading > h4 {
+
+.Product:hover .Product-inner {
+  transform: rotateY(180deg);
+}
+
+.Product-front,
+.Product-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.Product-front {
   color: black;
-  font-size: 30px;
 }
-.Content .Product1 > .back > .product_details {
-  padding: 0px 10px;
-}
-.Content .Product1 > .back > .product_details > h5 {
-  font-size: 25px;
-}
-.Content .Product1 > .back > .product_details > a {
-  margin-top: 5px;
+
+.Product-back {
+  padding: 10px 5px;
   color: black;
-  text-transform: uppercase;
-  font-size: 15px;
+  transform: rotateY(180deg);
+}
+.Product-back > h1 {
+  font-family: Cinzel;
+  margin-bottom: 70px;
+  color: #000;
+}
+.Product-back > p {
+  font-family: Josefin_Sans;
+  color: rgb(65, 65, 65);
+}
+.Product-back > h3 {
+  font-family: Oswald;
+  font-weight: 600;
+  color: rgb(65, 65, 65);
+}
+.Product-back > .btn {
+  margin-top: 30px;
   border: 1px solid black;
   border-radius: 0px;
-  font-weight: 600;
-}
-.Content .Product1 > .back > .product_details > a:hover {
-  background-color: rgb(56, 56, 56);
-  transition: all 0.5s ease-in-out;
-  color: white;
-}
-.Content .Product1 > .back > .product_details > a:focus,
-:active {
-  outline: none;
-}
-.Content > .Product1:hover {
-  box-shadow: 0px 15px 20px -13px gray;
-}
-.Content > .Product1:hover > .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.Content > .Product1:hover > .back {
-  transform: perspective(600px) rotateY(0deg);
-}
-.Content .Product2 {
-  grid-area: Product2;
-}
-.Content .Product2 > .front {
-  position: absolute;
-  transform: perspective(600px) rotateY(0deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
-  height: 400px;
-}
-.Content .Product2 > .front > img {
-  max-width: 100%;
-  height: auto;
-}
-.Content .Product2 > .back {
-  position: absolute;
-  transform: perspective(600px) rotateY(180deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
-  width: 370px;
-  height: 400px;
-  display: block;
-  text-align: center;
-}
-.Content .Product2 > .back > .heading > h4 {
-  color: black;
-  font-size: 30px;
-}
-.Content .Product2 > .back > .product_details {
-  padding: 0px 10px;
-}
-.Content .Product2 > .back > .product_details > h5 {
-  font-size: 25px;
-}
-.Content .Product2 > .back > .product_details > a {
-  margin-top: 5px;
-  color: black;
   text-transform: uppercase;
-  font-size: 15px;
-  border: 1px solid black;
-  border-radius: 0px;
+  letter-spacing: 0.6px;
   font-weight: 600;
+  padding: 8px 12px;
+  transition: 0.8s ease;
 }
-.Content .Product2 > .back > .product_details > a:hover {
-  background-color: rgb(56, 56, 56);
-  transition: all 0.5s ease-in-out;
-  color: white;
-}
-.Content .Product2 > .back > .product_details > a:focus,
-:active {
-  outline: none;
-}
-.Content > .Product2:hover {
-  box-shadow: 0px 15px 20px -13px gray;
-}
-.Content > .Product2:hover > .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.Content > .Product2:hover > .back {
-  transform: perspective(600px) rotateY(0deg);
-}
-.Content .Product3 {
-  grid-area: Product3;
-}
-.Content .Product3 > .front {
-  position: absolute;
-  transform: perspective(600px) rotateY(0deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
-  height: 400px;
-}
-.Content .Product3 > .front > img {
-  max-width: 100%;
-  height: auto;
-  text-align: center;
-}
-.Content .Product3 > .back {
-  position: absolute;
-  transform: perspective(600px) rotateY(180deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
-  width: 370px;
-  height: 400px;
-  display: block;
-  text-align: center;
-}
-.Content .Product3 > .back > .heading > h4 {
-  color: black;
-  font-size: 30px;
-}
-.Content .Product3 > .back > .product_details {
-  padding: 0px 10px;
-}
-.Content .Product3 > .back > .product_details > h5 {
-  font-size: 25px;
-}
-.Content .Product3 > .back > .product_details > a {
-  margin-top: 5px;
-  color: black;
-  text-transform: uppercase;
-  font-size: 15px;
-  border: 1px solid black;
-  border-radius: 0px;
-  font-weight: 600;
-}
-.Content .Product3 > .back > .product_details > a:hover {
-  background-color: rgb(56, 56, 56);
-  transition: all 0.5s ease-in-out;
-  color: white;
-}
-.Content .Product3 > .back > .product_details > a:focus,
-:active {
-  outline: none;
-}
-.Content > .Product3:hover {
-  box-shadow: 0px 15px 20px -13px gray;
-}
-.Content > .Product3:hover > .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.Content > .Product3:hover > .back {
-  transform: perspective(600px) rotateY(0deg);
-}
-.Content .Product4 {
-  grid-area: Product4;
-}
-.Content .Product4 > .front {
-  position: absolute;
-  transform: perspective(600px) rotateY(0deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
-  height: 400px;
-}
-.Content .Product4 > .front > img {
-  max-width: 100%;
-  text-align: center;
-}
-.Content .Product4 > .back {
-  position: absolute;
-  transform: perspective(600px) rotateY(180deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
-  width: 370px;
-  height: 400px;
-  display: block;
-  text-align: center;
-}
-.Content .Product4 > .back > .heading > h4 {
-  color: black;
-  font-size: 30px;
-}
-.Content .Product4 > .back > .product_details {
-  padding: 0px 10px;
-}
-.Content .Product4 > .back > .product_details > h5 {
-  font-size: 25px;
-}
-.Content .Product4 > .back > .product_details > a {
-  margin-top: 5px;
-  color: black;
-  text-transform: uppercase;
-  font-size: 15px;
-  border: 1px solid black;
-  border-radius: 0px;
-  font-weight: 600;
-}
-.Content .Product4 > .back > .product_details > a:hover {
-  background-color: rgb(56, 56, 56);
-  transition: all 0.5s ease-in-out;
-  color: white;
-}
-.Content .Product4 > .back > .product_details > a:focus,
-:active {
-  outline: none;
-}
-.Content > .Product4:hover {
-  box-shadow: 0px 15px 20px -13px gray;
-}
-.Content > .Product4:hover > .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.Content > .Product4:hover > .back {
-  transform: perspective(600px) rotateY(0deg);
-}
-.Content .Product5 {
-  grid-area: Product5;
-}
-.Content .Product5 > .front {
-  position: absolute;
-  transform: perspective(600px) rotateY(0deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
-  height: 400px;
-}
-.Content .Product5 > .front > img {
-  max-width: 100%;
-  height: auto;
-  text-align: center;
-}
-.Content .Product5 > .back {
-  position: absolute;
-  transform: perspective(600px) rotateY(180deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
-  width: 370px;
-  height: 400px;
-  display: block;
-  text-align: center;
-}
-.Content .Product5 > .back > .heading > h4 {
-  color: black;
-  font-size: 30px;
-}
-.Content .Product5 > .back > .product_details {
-  padding: 0px 10px;
-}
-.Content .Product5 > .back > .product_details > h5 {
-  font-size: 25px;
-}
-.Content .Product5 > .back > .product_details > a {
-  margin-top: 5px;
-  color: black;
-  text-transform: uppercase;
-  font-size: 15px;
-  border: 1px solid black;
-  border-radius: 0px;
-  font-weight: 600;
-}
-.Content .Product5 > .back > .product_details > a:hover {
-  background-color: rgb(56, 56, 56);
-  transition: all 0.5s ease-in-out;
-  color: white;
-}
-.Content .Product5 > .back > .product_details > a:focus,
-:active {
-  outline: none;
-}
-.Content > .Product5:hover {
-  box-shadow: 0px 15px 20px -13px gray;
-}
-.Content > .Product5:hover > .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.Content > .Product5:hover > .back {
-  transform: perspective(600px) rotateY(0deg);
-}
-.Content .Product6 {
-  grid-area: Product6;
-}
-.Content .Product6 > .front {
-  position: absolute;
-  transform: perspective(600px) rotateY(0deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
-  height: 400px;
-}
-.Content .Product6 > .front > img {
-  max-width: 100%;
-  height: auto;
-  text-align: center;
-}
-.Content .Product6 > .back {
-  position: absolute;
-  transform: perspective(600px) rotateY(180deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s;
-  width: 370px;
-  height: 400px;
-  display: block;
-  text-align: center;
-}
-.Content .Product6 > .back > .heading > h4 {
-  color: black;
-  font-size: 30px;
-}
-.Content .Product6 > .back > .product_details {
-  padding: 0px 10px;
-}
-.Content .Product6 > .back > .product_details > h5 {
-  font-size: 25px;
-}
-.Content .Product6 > .back > .product_details > a {
-  margin-top: 5px;
-  color: black;
-  text-transform: uppercase;
-  font-size: 15px;
-  border: 1px solid black;
-  border-radius: 0px;
-  font-weight: 600;
-}
-.Content .Product6 > .back > .product_details > a:hover {
-  background-color: rgb(56, 56, 56);
-  transition: all 0.5s ease-in-out;
-  color: white;
-}
-.Content .Product6 > .back > .product_details > a:focus,
-:active {
-  outline: none;
-}
-.Content > .Product6:hover {
-  box-shadow: 0px 15px 20px -13px gray;
-}
-.Content > .Product6:hover > .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.Content > .Product6:hover > .back {
-  transform: perspective(600px) rotateY(0deg);
+.Product-back > .btn:hover {
+  color: whitesmoke;
+  background-color: rgb(80, 80, 80);
 }
 .ads {
   background-color: white;
@@ -752,12 +449,6 @@
   font-family: Josefin_Sans;
 }
 .simpleParallax > h1 {
-  /* position: absolute;
-  top: 50%;
-  left: 33%;
-  color: white;
-  text-align: center;
-  font-weight: 600; */
   text-align: center;
   color: white;
   padding-top: 250px;
@@ -788,170 +479,6 @@
   line-height: 25px;
 }
 
-/* Product page */
-.product-item {
-  padding: 10px 0px;
-  margin: 20px 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: left;
-  font-family: Josefin_Sans;
-}
-.product-item > .product-image > img {
-  max-width: 100%;
-  width: 100%;
-}
-.product-item > .item-details > div > h4 {
-  font-size: 35px;
-  color: #000;
-  font-weight: 550;
-}
-.product-item > .item-details > .product_details > a {
-  color: rgb(65, 65, 65);
-}
-.product-item > .item-details > .product_details > div > input[type="radio"] {
-  background-color: #000;
-}
-.product-item > .item-details > .product_details > div > label {
-  font-size: 15px;
-  padding: 0px 10px;
-  color: #000;
-}
-.product-item > .item-details > .product_details > #Rating {
-  color: tomato;
-}
-.product-item > .item-details > .product_details > .btn {
-  margin: 15px 10px;
-  text-transform: uppercase;
-  padding: 8px 15px;
-  border: none;
-  background-color: rgb(44, 44, 44);
-  border-radius: 0px;
-  color: #fff;
-  font-weight: 500;
-  transition: all 0.6s ease-out;
-}
-.product-item > .item-details > .product_details > .btn:hover {
-  background-color: rgb(255, 255, 255);
-  color: #000;
-}
-.product-item > .item-details > .product_details > .btn:focus {
-  outline: none;
-  border: none;
-}
-.product-item > .item-details > .product_details > .btn:active,
-:focus {
-  outline: none;
-  border: none;
-}
-
-.tabs {
-  margin-top: 30px;
-  border-bottom: 1px solid rgb(167, 167, 167);
-}
-.tabs > button {
-  padding: 10px 10px;
-  margin: 2px 5px 0px 5px;
-  background-color: transparent;
-  border: none;
-  text-transform: uppercase;
-  font-family: Josefin_Sans;
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-.tabs > button:focus {
-  color: rgb(231, 92, 67);
-  border-bottom: 5px solid rgb(231, 92, 67);
-}
-.tabs > button:focus,
-:active {
-  outline: none;
-  border-radius: 0px;
-}
-.tab {
-  height: 300px;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  font-family: Mercellus;
-  text-align: center;
-}
-table > tr {
-  padding: 15px 20px;
-}
-table > tr > td {
-  text-align: left;
-  font-size: 15px;
-  font-weight: 600;
-  border-top: 0.5px solid #d5d5d5;
-  padding: 15px 20px;
-}
-table > tr > #topic {
-  background-color: rgb(247, 247, 247);
-  text-transform: uppercase;
-  color: #000;
-}
-table > tr > #detail {
-  font-size: 14;
-  color: gray;
-}
-.History {
-  text-align: left;
-}
-#Review {
-  padding: 10px 0px;
-}
-.History > h5 {
-  font-weight: 600;
-  padding: 10px 0px;
-  font-size: 25px;
-}
-.History > p {
-  word-spacing: 1px;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.card {
-  text-align: center;
-  font-size: small;
-  width: 250px;
-}
-.card > img {
-  max-width: 100%;
-  width: 100%;
-}
-.card > .item-details > h6 {
-  font-family: Cinzel;
-  font-size: 20px;
-  font-weight: 600;
-}
-.card > .item-details > h5 {
-  font-family: Oswald;
-  font-size: 18px;
-  font-weight: 600;
-  color: rgb(48, 48, 48);
-}
-.card > .item-details .btn {
-  border: 1.5px solid black;
-  color: #000;
-  text-transform: uppercase;
-  font-size: 13px;
-  border-radius: 0px;
-  padding: 10px 10px;
-  margin: 5px 0px;
-  font-weight: 600;
-  transition: ease-in 1s;
-}
-.card > .item-details > .btn:hover {
-  box-shadow: inset 400px 0 0 0 rgb(61, 61, 61);
-  color: white;
-}
 /* Footer Section */
 .footer {
   background-color: rgb(48, 48, 48);
