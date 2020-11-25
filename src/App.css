@@ -155,27 +155,26 @@
 .NavBar > .nav > ul > li > form {
   margin: 5px 0px;
   text-align: center;
+  border: 1px solid rgb(168, 168, 168);
+  padding: 0px 8px;
 }
 .NavBar > .nav > ul > li > form > input[type="search"] {
-  padding: 10px 10px;
+  padding: 5px 10px;
   border: none;
   background-color: transparent;
   color: white;
   letter-spacing: 1px;
   border-radius: 0px;
 }
-.NavBar > .nav > ul > li > form > button {
-  padding: 10px 10px;
-  border: none;
-  background-color: white;
-  color: black;
-}
-.NavBar > .nav > ul > li > form > button > i {
-  color: white;
+.NavBar > .nav > ul > li > form > i {
+  color: #000;
+  position: relative;
+  top: 3px;
 }
 .NavBar > .nav > .cart > a > span {
   border-radius: 50%;
 }
+
 /* Humburger Menu */
 .menu-container {
   position: relative;
@@ -837,6 +836,10 @@
 .product-item > .item-details > .product_details > .btn:hover {
   background-color: rgb(255, 255, 255);
   color: #000;
+}
+.product-item > .item-details > .product_details > .btn:focus {
+  outline: none;
+  border: none;
 }
 .product-item > .item-details > .product_details > .btn:active,
 :focus {

@@ -1,6 +1,6 @@
 import React from "react";
 import MaterialIcon from "material-icons-react";
-
+import { Link, Redirect, useHistory } from "react-router-dom";
 import { Header } from "./Header";
 import { NavigationBar } from "./NavigationBar";
 import { Footer } from "./Footer";
@@ -8,7 +8,7 @@ import Product from "../images/Champagne.png";
 import { ProductTab } from "./Tabs";
 import { ProductCarousel } from "./ProductCarousel";
 import { useDispatch, useSelector } from "react-redux";
-import { ADD, REMOVE } from "./Redux/Action";
+import { ADD } from "./Redux/Action";
 
 const HR = ({ color }) => (
   <hr
@@ -20,14 +20,14 @@ const HR = ({ color }) => (
   />
 );
 export const Products = () => {
+  var History = useHistory();
   const value = useSelector((state) => state);
   const dispatch = useDispatch();
   const AddToCart = () => {
     dispatch(ADD());
+    History.push("/Cart");
   };
-  const RemoveFromCart = () => {
-    dispatch(REMOVE());
-  };
+
   return (
     <div>
       <div>
@@ -75,10 +75,6 @@ export const Products = () => {
                 </div>
                 <button onClick={AddToCart} className="btn">
                   Add To Cart
-                </button>
-
-                <button onClick={RemoveFromCart} className="btn">
-                  Remove
                 </button>
               </div>
             </div>

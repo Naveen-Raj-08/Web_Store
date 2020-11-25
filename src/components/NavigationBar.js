@@ -8,7 +8,7 @@ import { HumbergerMenu } from "./HumbergerMenu";
 export const NavigationBar = (props) => {
   return (
     <div>
-      <header className="NavBar ">
+      <header className="NavBar">
         <ScrollBar />
         <div className="logo">
           <Link to="/">
@@ -17,14 +17,6 @@ export const NavigationBar = (props) => {
         </div>
         <nav className="nav">
           <ul>
-            <li>
-              <form>
-                <input type="search" placeholder="Type Something" />
-                <button type="submit">
-                  <MaterialIcon icon="search" size={"tiny"} color="#000" />
-                </button>
-              </form>
-            </li>
             <li>
               <Link to="/Home">Home</Link>
             </li>
@@ -43,10 +35,20 @@ export const NavigationBar = (props) => {
             <li>
               <HumbergerMenu />
             </li>
+            <li>
+              <form>
+                <MaterialIcon icon="search" size={"tiny"} color="white" />
+                <input type="search" placeholder="Type Something" />
+              </form>
+            </li>
           </ul>
           <div className="cart">
             <Link to="/Cart">
-              <MaterialIcon icon="shopping_cart" color="white" size="medium" />
+              <MaterialIcon
+                icon="shopping_cart"
+                color="rgb(278, 278, 278)"
+                size="medium"
+              />
               <span className="badge badge-danger ">{props.Value}</span>
             </Link>
             <br />
