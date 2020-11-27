@@ -1,7 +1,8 @@
 import React from "react";
 import MaterialIcon from "material-icons-react";
-import { connect, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../Actions/Action";
+import { Link } from "react-router-dom";
 
 export const Card = (props) => {
   let Item = props.Values;
@@ -11,10 +12,8 @@ export const Card = (props) => {
     props.ItemToCart(props.Values.title);
     console.log(props.ItemToCart(props.Values.title));
   };
-
-  useDispatch(addToCart(props));
   return (
-    <div className="card">
+    <div className="card product-card">
       <img
         className="card-img-top"
         src={Item.image}
@@ -31,7 +30,7 @@ export const Card = (props) => {
           <MaterialIcon icon="star_border" size="tiny" />
         </span>
         <h6>{Item.size}</h6>
-        <p className="card-text">${Item.price}</p>
+        <p className="card-text">${Item.price}.00</p>
         <button onClick={handleAddToCart} className="btn">
           Add To Cart
         </button>

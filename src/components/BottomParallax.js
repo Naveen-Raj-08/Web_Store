@@ -2,7 +2,7 @@ import React from "react";
 
 export const BottomParallax = () => {
   return (
-    <div className="simpleParallax container">
+    <div className="simpleParallax ">
       <h1>Enjoy on Every Weekends!</h1>
     </div>
   );

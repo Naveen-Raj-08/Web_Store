@@ -29,8 +29,10 @@ export const ProductCarousel = () => {
         paddingLeft="10"
         paddingRight="10"
         disableButtonsControls={true}
+        autoPlay={true}
+        autoPlayInterval="1500"
       >
-        <div className="card">
+        <div className="item-card">
           <img src={Item1} alt="product-items" />
           <div className="item-details">
             <h6>Korbel</h6>
@@ -41,12 +43,10 @@ export const ProductCarousel = () => {
               <MaterialIcon icon="star_border" size={"tiny"} />
             </span>
             <h5 className="price">$100.00</h5>
-            <Link to="/Products" className="btn">
-              Add to Cart
-            </Link>
+            <button className="btn">Add to Cart</button>
           </div>
         </div>
-        <div className="card">
+        <div className="item-card">
           <img src={Item2} alt="product-items" />
           <div className="item-details">
             <h6>Korbel</h6>
@@ -57,12 +57,10 @@ export const ProductCarousel = () => {
               <MaterialIcon icon="star_border" size={"tiny"} />
             </span>
             <h5 className="price">$100.00</h5>
-            <Link to="/Products" className="btn">
-              Add to Cart
-            </Link>
+            <button className="btn">Add to Cart</button>
           </div>
         </div>
-        <div className="card">
+        <div className="item-card">
           <img src={Item3} alt="product-items" />
           <div className="item-details">
             <h6>Korbel</h6>
@@ -73,12 +71,10 @@ export const ProductCarousel = () => {
               <MaterialIcon icon="star_border" size={"tiny"} />
             </span>
             <h5 className="price">$100.00</h5>
-            <Link to="/Products" className="btn">
-              Add to Cart
-            </Link>
+            <button className="btn">Add to Cart</button>
           </div>
         </div>
-        <div className="card">
+        <div className="item-card">
           <img src={Item4} alt="product-items" />
           <div className="item-details">
             <h6>Korbel</h6>
@@ -89,12 +85,10 @@ export const ProductCarousel = () => {
               <MaterialIcon icon="star_border" size={"tiny"} />
             </span>
             <h5 className="price">$100.00</h5>
-            <Link to="/Products" className="btn">
-              Add to Cart
-            </Link>
+            <button className="btn">Add to Cart</button>
           </div>
         </div>
-        <div className="card">
+        <div className="item-card">
           <img src={Item5} alt="product-items" />
           <div className="item-details">
             <h6>Korbel</h6>
@@ -105,12 +99,10 @@ export const ProductCarousel = () => {
               <MaterialIcon icon="star_border" size={"tiny"} />
             </span>
             <h5 className="price">$100.00</h5>
-            <Link to="/Products" className="btn">
-              Add to Cart
-            </Link>
+            <button className="btn">Add to Cart</button>
           </div>
         </div>
-        <div className="card">
+        <div className="item-card">
           <img src={Item6} alt="product-items" />
           <div className="item-details">
             <h6>Korbel</h6>
@@ -121,12 +113,10 @@ export const ProductCarousel = () => {
               <MaterialIcon icon="star_border" size={"tiny"} />
             </span>
             <h5 className="price">$100.00</h5>
-            <Link to="/Products" className="btn">
-              Add to Cart
-            </Link>
+            <button className="btn">Add to Cart</button>
           </div>
         </div>
-        <div className="card">
+        <div className="item-card">
           <img src={Item1} alt="product-items" />
           <div className="item-details">
             <h6>Korbel</h6>
@@ -137,12 +127,10 @@ export const ProductCarousel = () => {
               <MaterialIcon icon="star_border" size={"tiny"} />
             </span>
             <h5 className="price">$100.00</h5>
-            <Link to="/Products" className="btn">
-              Add to Cart
-            </Link>
+            <button className="btn">Add to Cart</button>
           </div>
         </div>
-        <div className="card">
+        <div className="item-card">
           <img src={Item2} alt="product-items" />
           <div className="item-details">
             <h6>Korbel</h6>
@@ -153,12 +141,10 @@ export const ProductCarousel = () => {
               <MaterialIcon icon="star_border" size={"tiny"} />
             </span>
             <h5 className="price">$100.00</h5>
-            <Link to="/Products" className="btn">
-              Add to Cart
-            </Link>
+            <button className="btn">Add to Cart</button>
           </div>
         </div>
-        <div className="card">
+        <div className="item-card">
           <img src={Item3} alt="product-items" />
           <div className="item-details">
             <h6>Korbel</h6>
@@ -169,12 +155,10 @@ export const ProductCarousel = () => {
               <MaterialIcon icon="star_border" size={"tiny"} />
             </span>
             <h5 className="price">$100.00</h5>
-            <Link to="/Products" className="btn">
-              Add to Cart
-            </Link>
+            <button className="btn">Add to Cart</button>
           </div>
         </div>
-        <div className="card">
+        <div className="item-card">
           <img src={Item4} alt="product-items" />
           <div className="item-details">
             <h6>Korbel</h6>
@@ -185,9 +169,7 @@ export const ProductCarousel = () => {
               <MaterialIcon icon="star_border" size={"tiny"} />
             </span>
             <h5 className="price">$100.00</h5>
-            <Link to="/Products" className="btn">
-              Add to Cart
-            </Link>
+            <button className="btn">Add to Cart</button>
           </div>
         </div>
       </AliceCarousel>

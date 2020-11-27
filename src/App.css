@@ -384,14 +384,19 @@
 .Product-front,
 .Product-back {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .Product-front {
   color: black;
+}
+.Product-front > img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
 }
 
 .Product-back {
@@ -433,23 +438,31 @@
   grid-gap: 10px;
   padding: 10px 10px;
 }
-.card {
+.product-card {
   text-align: center;
   transition: 0.4s ease-in-out;
 }
-.card > img {
+.product-card > img {
   max-width: 100%;
   width: 100%;
   align-self: center;
 }
-.card > .details > h4 {
+.product-card > .details > h4 {
   font-family: Cinzel;
+  color: black;
 }
-.card > .details > h6 {
+.product-card > .details > h6 {
   font-family: Josefin_Sans;
   font-size: 18px;
+  color: black;
 }
-.card > .details > button {
+.product-card > .details > p {
+  font-size: 20px;
+  font-family: Oswald;
+  font-weight: 600;
+  color: rgb(53, 53, 53);
+}
+.product-card > .details > button {
   border: 1px solid black;
   font-size: 13px;
   padding: 10px 13px;
@@ -461,17 +474,17 @@
   font-weight: 600;
   transition: 0.6s ease-in-out;
 }
-.card > .details > button:active,
+.product-card > .details > button:active,
 :focus {
   outline: none;
   border: none;
 }
-.card:hover > .details > button {
+.product-card:hover > .details > button {
   background-color: rgb(39, 39, 39);
   color: whitesmoke;
 }
-.card:hover {
-  box-shadow: 0px 20px 10px -15px gray;
+.product-card:hover {
+  box-shadow: 0px 18px 10px -15px gray;
 }
 
 .ads {
@@ -526,6 +539,182 @@
   line-height: 25px;
 }
 
+.tabs {
+  margin-top: 30px;
+  border-bottom: 1px solid rgb(167, 167, 167);
+}
+.tabs > button {
+  padding: 10px 10px;
+  margin: 2px 5px 0px 5px;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-family: Josefin_Sans;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.tabs > button:focus {
+  color: rgb(231, 92, 67);
+  border-bottom: 5px solid rgb(231, 92, 67);
+}
+.tabs > button:focus,
+:active {
+  outline: none;
+  border-radius: 0px;
+}
+.tab {
+  height: 300px;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: Mercellus;
+  text-align: center;
+}
+table > tr {
+  padding: 15px 20px;
+}
+table > tr > td {
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  border-top: 0.5px solid #d5d5d5;
+  padding: 15px 20px;
+}
+table > tr > #topic {
+  background-color: rgb(247, 247, 247);
+  text-transform: uppercase;
+  color: #000;
+}
+table > tr > #detail {
+  font-size: 14;
+  color: gray;
+}
+.History {
+  text-align: left;
+}
+#Review {
+  padding: 10px 0px;
+}
+.History > h5 {
+  font-weight: 600;
+  padding: 10px 0px;
+  font-size: 25px;
+}
+.History > p {
+  word-spacing: 1px;
+}
+
+.item-card {
+  text-align: center;
+  font-size: small;
+  width: 250px;
+}
+.item-card > img {
+  max-width: 100%;
+  width: 100%;
+}
+.item-card > .item-details > h6 {
+  font-family: Cinzel;
+  font-size: 20px;
+  font-weight: 600;
+}
+.item-card > .item-details > h5 {
+  font-family: Oswald;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(48, 48, 48);
+}
+.item-card > .item-details .btn {
+  border: 1.5px solid black;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 13px;
+  border-radius: 0px;
+  padding: 10px 10px;
+  margin: 5px 0px;
+  font-weight: 600;
+  transition: ease-in 1s;
+}
+.item-card > .item-details > .btn:hover {
+  box-shadow: inset 400px 0 0 0 rgb(61, 61, 61);
+  color: white;
+}
+
+.shop > a > i {
+  background-color: whitesmoke;
+  border-radius: 50%;
+  padding: 10px 10px;
+  color: black;
+  margin: 10px 3px;
+}
+.cart-details {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  margin: 20px 0px;
+  text-align: center;
+}
+.cart-details > .product-image {
+  max-width: 100%;
+  width: 100%;
+  height: 200px;
+}
+.cart-details > .product-title > h1 {
+  font-family: Cinzel;
+  font-size: 23px;
+  font-weight: 400;
+  color: #000;
+}
+.cart-details > .product-price > h4 {
+  font-family: Oswald;
+  font-size: 23px;
+  font-weight: 400;
+  color: rgb(48, 47, 47);
+}
+.cart-details > .order > button {
+  padding: 8px 12px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: rgb(43, 43, 43);
+  font-weight: 600;
+  border-radius: 0px;
+  border: 1px solid black;
+  transition: 0.6s ease-in;
+}
+.cart-details > .order > button:hover {
+  box-shadow: inset 200px 0 0 0 rgb(61, 61, 61);
+  color: whitesmoke;
+}
+.cart-details > .cancel > button {
+  padding: 8px 12px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: rgb(43, 43, 43);
+  font-weight: 600;
+  border-radius: 0px;
+  border: 1px solid black;
+  transition: 0.6s ease-in;
+}
+.cart-details > .cancel > button:hover {
+  box-shadow: inset 100px 0 0 0 rgb(192, 21, 21);
+  color: white;
+  border: 1px solid rgb(192, 21, 21);
+}
+.total-price {
+  position: relative;
+}
+.total-price > h4 {
+  position: absolute;
+  right: 10%;
+  padding: 5px 10px;
+  color: rgb(58, 58, 58);
+}
 /* Footer Section */
 .footer {
   background-color: rgb(48, 48, 48);
@@ -661,22 +850,110 @@
 
 /* Tablet Landscape */
 @media screen and (max-width: 1199px) {
-  .Content {
-    display: none;
+  .Header > .ml12 {
+    font-size: 10px;
+  }
+  .Header > h5 {
+    font-size: 10px;
+  }
+  .Header > p {
+    font-size: 10px;
+  }
+  .NavBar {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  .NavBar > .logo > a > h3 {
+    font-size: 20px;
+  }
+  .NavBar > .nav > ul > li > a {
+    font-size: 10px;
+    padding: 5px 5px;
+  }
+  .NavBar > .nav > .cart {
+    padding: 0;
+    margin: 0 20px;
+  }
+  .NavBar > .nav > .cart > a > i {
+    font-size: 25px;
+  }
+  .NavBar > .nav > ul > li > form {
+    font-size: 10px;
+    margin: 0;
+  }
+  .parallax {
+    padding: 0;
+  }
+  .parallax > h1 {
+    font-size: 30px;
+  }
+  .parallax > h1 > #for {
+    font-size: 22px;
+  }
+  .parallax > h1 > button {
+    font-size: 17px;
+    padding: 5px 8px;
+    margin: 15px;
+  }
+  .heading {
+    font-size: 28px;
+    margin: 20px 0px;
+    padding: 0;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: "Product Product Product";
+    grid-gap: 10px;
+    padding: 10px 0px;
+    align-items: center;
+  }
+  .Product {
+    width: 250px;
+    height: 300px;
+  }
+  .Product-front,
+  .Product-back {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .Product-back > h1 {
+    margin-bottom: 30px;
+    font-size: 23px;
+  }
+  .Product-back > p {
+    font-size: 12px;
+  }
+  .Product-back > h3 {
+    font-size: 16px;
+  }
+  .Product-back > span > i {
+    font-size: 8px;
+  }
+  .Product-back > .btn {
+    font-size: 10px;
+    padding: 5px 5px;
+    margin-top: 10px;
+  }
+  .About {
+    padding: 1rem 5rem;
+    font-family: Mercellus;
+    margin: 5rem 0;
+    text-align: left;
+    border-left: 20px solid rgb(201, 201, 201);
+    border-right: 20px solid rgb(201, 201, 201);
+    border-radius: 200px;
   }
 }
 /* Tablet Portrait */
 @media screen and (max-width: 999px) {
-  .Content {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas:
-      "Product1"
-      "Product2"
-      "Product3"
-      "Product4"
-      "Product5"
-      "Product6";
+  .NavBar > .nav > ul > li > form {
+    display: none;
   }
 }
 /* Mobile Landscape */
@@ -688,20 +965,7 @@
     display: block;
     position: relative;
   }
-  .Content {
-    display: none;
-    grid-template-columns: 100%;
-    grid-template-areas:
-      "Product1"
-      "Product2"
-      "Product3"
-      "Product4"
-      "Product5"
-      "Product6";
-    width: 100%;
-    height: auto;
-    align-items: center;
-  }
+
   .Content > .Product1 {
     width: 100%;
   }
@@ -722,15 +986,7 @@
     border: none;
     text-align: center;
   }
-  .footer > .content {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas:
-      "Product"
-      "Favorite"
-      "Follow";
-    text-align: center;
-  }
+
   .footer > .content > .contact > ul {
     display: flex;
     flex-direction: row;

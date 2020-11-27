@@ -49,7 +49,7 @@ export const NavigationBar = (props) => {
                 color="rgb(278, 278, 278)"
                 size="medium"
               />
-              <span className="badge badge-danger ">{props.Value}</span>
+              <span className="badge badge-danger ">1</span>
             </Link>
             <br />
           </div>
