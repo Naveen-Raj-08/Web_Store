@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const HumbergerMenu = () => {
   return (
@@ -13,9 +14,18 @@ export const HumbergerMenu = () => {
         <div>
           <div>
             <ul>
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/Product">Shop</Link>
+              </li>
+              <li>
+                <Link to="/Cart">Cart</Link>
+              </li>
+              <li>
+                <Link to="/Favorites">Favorites</Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -14,28 +14,24 @@ const HR = ({ color }) => (
 export const Products = (props) => {
   let Product = props.product;
   return (
-    <div>
-      <div className="Content">
-        <div className="Product">
-          <div className="Product-inner">
-            <div className="Product-front">
-              <img src={Product.image} alt={Product.alt} />
-            </div>
-            <div className="Product-back">
-              <h1>{Product.title}</h1>
-              <p>{Product.description}</p>
-              <span>
-                <MaterialIcon icon="star_rate" size="small" />
-                <MaterialIcon icon="star_rate" size="small" />
-                <MaterialIcon icon="star_half" size="small" />
-                <MaterialIcon icon="star_border" size="small" />
-              </span>
-              <h3>${Product.price}</h3>
-              <Link to="/Shop-Product" className="btn">
-                Go for Shop
-              </Link>
-            </div>
-          </div>
+    <div className="Product">
+      <div className="Product-inner">
+        <div className="Product-front">
+          <img src={Product.image} alt={Product.alt} />
+        </div>
+        <div className="Product-back">
+          <h1>{Product.title}</h1>
+          <p>{Product.description}</p>
+          <span>
+            <MaterialIcon icon="star_rate" size="small" />
+            <MaterialIcon icon="star_rate" size="small" />
+            <MaterialIcon icon="star_half" size="small" />
+            <MaterialIcon icon="star_border" size="small" />
+          </span>
+          <h3>${Product.price}</h3>
+          <Link to="/Shop-Product" className="btn">
+            Go for Shop
+          </Link>
         </div>
       </div>
     </div>

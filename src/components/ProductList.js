@@ -10,7 +10,7 @@ const ProductList = (props) => {
       <div className="heading">
         <h1>Our Favorites</h1>
       </div>
-      <div className="row">
+      <div className="Product-list">
         {props.Products.map((product) => (
           <Products product={product} key={product.id} />
         ))}

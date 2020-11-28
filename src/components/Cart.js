@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { NavigationBar } from "./NavigationBar";
-import Data from "./Data";
+
 import MaterialIcon from "material-icons-react";
 import { Link } from "react-router-dom";
 import Image from "../images/Item4.jpg";

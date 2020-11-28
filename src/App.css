@@ -104,6 +104,8 @@
 }
 .NavBar > .nav > .cart {
   margin: 5px 10px;
+  position: absolute;
+  right: 0px;
 }
 .NavBar > .nav > .cart > a > i {
   float: right;
@@ -163,8 +165,11 @@
   border: none;
   background-color: transparent;
   color: white;
+  width: 250px;
   letter-spacing: 1px;
-  border-radius: 0px;
+}
+.NavBar > .nav > .cart {
+  padding: 0px 15px;
 }
 .NavBar > .nav > ul > li > form > i {
   color: #000;
@@ -178,36 +183,35 @@
 /* Humburger Menu */
 .menu-container {
   position: relative;
-  top: 0;
-  right: 0;
+  top: -25px;
+  right: 55px;
   z-index: 2;
   display: none;
 }
 .menu-container > .toggler {
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  width: 60px;
-  height: 60px;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 25px;
   border-radius: 50%;
   opacity: 0;
   z-index: 3;
 }
-.menu-container .Humburger {
+.menu-container > .Humburger {
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  width: 60px;
-  height: 60px;
+  top: 0rem;
+  left: 0rem;
+  width: 50px;
+  height: 25px;
   border-radius: 50%;
-  background-color: rgb(187, 187, 187);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
 }
 
-.menu-container > .Humburger div {
+.menu-container > .Humburger > div {
   position: absolute;
   width: 50%;
   height: 3px;
@@ -215,21 +219,22 @@
   background-color: white;
   transition: 0.4s;
 }
-.menu-container > .Humburger div::before,
-.menu-container > .Humburger div::after {
+.menu-container > .Humburger > div::before,
+.menu-container > .Humburger > div::after {
   content: "";
   position: absolute;
+  top: 0px;
   width: 100%;
   height: 3px;
   border-radius: 1.5px;
   background-color: white;
   transition: 0.4s;
 }
-.menu-container > .Humburger div::before {
+.menu-container > .Humburger > div::before {
   top: -10px;
   left: 0;
 }
-.menu-container > .Humburger div::after {
+.menu-container > .Humburger > div::after {
   top: 10px;
   left: 0;
 }
@@ -258,7 +263,7 @@
   visibility: hidden;
   transition: 0.6s;
 }
-.menu-container > .menu div {
+.menu-container > .menu > div {
   position: absolute;
   width: 1600px;
   height: 1600px;
@@ -266,36 +271,42 @@
   top: 50%;
   left: 50%;
   transform: translateX(-150%) translateY(-50%);
-  background-color: rgb(95, 95, 95);
+  background-color: rgb(61, 62, 63);
   transition: 0.6s;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.9;
 }
-.menu-container > .menu div div {
-  max-width: 90vw;
-  max-height: 100vh;
+.menu-container > .menu > div > div {
+  max-width: 0vw;
+  max-height: 0vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
   opacity: 2;
+  margin: 0px 15px;
 }
-.menu-container > .menu div div ul {
+.menu-container > .menu > div > div > ul {
   list-style: none;
 }
-.menu-container > .menu div div ul li {
+.menu-container > .menu > div > div > ul > li > a {
   margin: 0.5rem;
   display: block;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 550;
   text-transform: uppercase;
   color: #fff;
   transition: 0.3s;
+  font-family: Quicksand;
+  letter-spacing: 1.5px;
 }
-.menu-container > .menu div div ul li:hover {
+
+.menu-container > .menu > div > div > ul > li > a:hover {
   color: black;
+  text-decoration: none;
 }
 
 .parallax {
@@ -351,7 +362,7 @@
   padding: 15px 0px;
   margin: 30px 0px;
 }
-.row {
+.Product-list {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-areas: "Product Product Product";
@@ -360,6 +371,7 @@
 }
 .Content {
   grid-area: Product;
+  text-align: center;
 }
 .Product {
   background-color: transparent;
@@ -512,15 +524,13 @@
   text-align: center;
   color: white;
   padding-top: 250px;
+  text-shadow: 0px 0px 10px rgba(255, 159, 34, 0.938);
 }
 .About {
-  padding: 1rem 5rem;
+  padding: 1rem 1rem;
   font-family: Mercellus;
   margin: 5rem 0;
-  text-align: left;
-  border-left: 20px solid rgb(201, 201, 201);
-  border-right: 20px solid rgb(201, 201, 201);
-  border-radius: 200px;
+  text-align: center;
 }
 .About > h2 {
   font-weight: bold;
@@ -727,9 +737,12 @@ table > tr > #detail {
   grid-gap: 10px;
   font-family: Quicksand;
   padding: 20px 0px;
+  margin: 0px 50px;
+  align-items: baseline;
 }
 .footer > .content > .Products {
   grid-area: Product;
+  text-align: center;
 }
 .footer > .content > .Products > h1 {
   color: rgb(201, 201, 201);
@@ -845,6 +858,7 @@ table > tr > #detail {
   font-weight: 100;
   margin-top: 10px;
   letter-spacing: 1px;
+  font-family: Quicksand;
 }
 /* ------------------------------- */
 
@@ -862,13 +876,15 @@ table > tr > #detail {
   .NavBar {
     display: grid;
     grid-template-columns: 20% 80%;
+    align-items: baseline;
   }
   .NavBar > .logo > a > h3 {
     font-size: 20px;
   }
   .NavBar > .nav > ul > li > a {
     font-size: 10px;
-    padding: 5px 5px;
+    padding: 0;
+    margin: 0;
   }
   .NavBar > .nav > .cart {
     padding: 0;
@@ -897,37 +913,38 @@ table > tr > #detail {
   }
   .heading {
     font-size: 28px;
-    margin: 20px 0px;
+    margin: 40px 0px;
     padding: 0;
   }
   .container {
     margin: 0;
     padding: 0;
   }
-  .row {
+  .Product-list {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-areas: "Product Product Product";
-    grid-gap: 10px;
+    grid-row-gap: 30px;
     padding: 10px 0px;
-    align-items: center;
   }
   .Product {
-    width: 250px;
-    height: 300px;
+    width: 280px;
+    height: 380px;
+    justify-self: center;
   }
   .Product-front,
   .Product-back {
-    width: 200px;
-    height: 300px;
+    width: 280px;
+    height: 380px;
     overflow: hidden;
+    align-self: center;
   }
   .Product-back > h1 {
     margin-bottom: 30px;
     font-size: 23px;
   }
   .Product-back > p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .Product-back > h3 {
     font-size: 16px;
@@ -938,26 +955,90 @@ table > tr > #detail {
   .Product-back > .btn {
     font-size: 10px;
     padding: 5px 5px;
-    margin-top: 10px;
+    margin-top: 30px;
+  }
+  .NavBar > .nav > ul > li > form > input[type="search"] {
+    width: 220px;
   }
   .About {
-    padding: 1rem 5rem;
     font-family: Mercellus;
     margin: 5rem 0;
-    text-align: left;
-    border-left: 20px solid rgb(201, 201, 201);
-    border-right: 20px solid rgb(201, 201, 201);
-    border-radius: 200px;
+    text-align: center;
+    padding: 0;
+  }
+  .container {
+    padding: 0px;
   }
 }
 /* Tablet Portrait */
 @media screen and (max-width: 999px) {
+  .Header {
+    display: none;
+  }
   .NavBar > .nav > ul > li > form {
     display: none;
+  }
+  .NavBar {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+  }
+  .NavBar > .nav > .cart {
+    margin-top: 5px;
+  }
+  .NavBar > .logo > a > h3 {
+    padding: 0 10px;
+    margin: 0;
+    text-align: left;
+  }
+  .NavBar > .nav {
+    margin-top: 10px;
+  }
+  .NavBar > .nav > ul {
+    margin-top: 5px;
+  }
+  .Product {
+    width: 200px;
+    height: 300px;
+  }
+  .Product-front,
+  .Product-back {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    align-self: center;
+  }
+  .Product-back > h1 {
+    margin-bottom: 20px;
+  }
+  .Product-back > .btn {
+    font-size: 10px;
+    padding: 5px 5px;
+    margin-top: 10px;
   }
 }
 /* Mobile Landscape */
 @media screen and (max-width: 767px) {
+  .NavBar {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+  }
+  .NavBar > .nav > .cart {
+    margin: 0 10px;
+    padding: 0;
+  }
+  .Header {
+    margin: 10px 0px;
+  }
+  .NavBar > .logo {
+    margin-top: 10px;
+    text-align: left;
+  }
   .NavBar > .nav > ul > li > a {
     display: none;
   }
@@ -965,9 +1046,38 @@ table > tr > #detail {
     display: block;
     position: relative;
   }
-
-  .Content > .Product1 {
-    width: 100%;
+  .parallax > h1 {
+    font-size: 25px;
+    left: 20px;
+  }
+  .parallax > h1 > #for {
+    font-size: 15px;
+  }
+  .parallax > h1 > button {
+    font-size: 12px;
+  }
+  .Product-list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "Product Product";
+    grid-row-gap: 30px;
+    padding: 10px 0px;
+  }
+  .heading > h1 {
+    font-size: 30px;
+  }
+  .About {
+    text-align: left;
+    padding: 0px 15px;
+  }
+  .About > h2 {
+    font-size: 20px;
+  }
+  .About > h5 {
+    font-size: 18px;
+  }
+  .About > p {
+    font-size: 13px;
   }
   .footer > .content {
     display: grid;
@@ -975,16 +1085,56 @@ table > tr > #detail {
     grid-template-areas:
       "Product Product"
       "Favorite Follow";
+    margin: 0px 15px;
+  }
+  .footer > .content > .Products {
+    text-align: left;
+  }
+  .footer > .content > .Favorites {
+    text-align: left;
+  }
+  .footer > .content > .contact {
     text-align: left;
   }
 }
 /* Mobile Portrait */
 @media screen and (max-width: 480px) {
-  .About {
-    padding: 0 5px;
-    margin: 0;
-    border: none;
-    text-align: center;
+  .Product-list {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "Product";
+    grid-row-gap: 30px;
+  }
+  .Product {
+    width: 150px;
+    height: 250px;
+    justify-self: center;
+  }
+  .Product-front,
+  .Product-back {
+    width: 150px;
+    height: 250px;
+    overflow: hidden;
+    align-self: center;
+  }
+  .Product-back > h1 {
+    font-size: 18px;
+  }
+  .Product-back > p {
+    font-size: 10px;
+  }
+  .parallax > h1 {
+    top: 100px;
+    left: 10px;
+    font-size: 15px;
+  }
+  .parallax > h1 > #for {
+    font-size: 10px;
+  }
+  .parallax > h1 > button {
+    font-size: 9px;
+    margin-top: 10px;
+    padding: 3px 3px;
   }
 
   .footer > .content > .contact > ul {

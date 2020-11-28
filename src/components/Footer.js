@@ -14,7 +14,7 @@ const HR = ({ color }) => (
     style={{
       color: color,
       backgroundColor: color,
-      height: 0.5,
+      height: 0.2,
     }}
   />
 );
@@ -22,7 +22,7 @@ export const Footer = () => {
   return (
     <div className="footer">
       <SVG />
-      <div className="content container">
+      <div className="content">
         <div className="Products">
           <h1>About</h1>
           <p>
@@ -81,8 +81,8 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <HR color="rgb(150, 150, 150)" />
-      <div className="container" id="footer">
+      <HR color="rgb(89, 89, 89)" />
+      <div id="footer">
         <h1>Newsletter</h1>
         <form>
           <input type="email" placeholder="Your Email Please...." />

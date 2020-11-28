@@ -32,15 +32,14 @@ export const NavigationBar = (props) => {
             <li>
               <Link to="/#">Special</Link>
             </li>
-            <li>
-              <HumbergerMenu />
-            </li>
+
             <li>
               <form>
                 <MaterialIcon icon="search" size={"tiny"} color="white" />
                 <input type="search" placeholder="Type Something" />
               </form>
             </li>
+            <li></li>
           </ul>
           <div className="cart">
             <Link to="/Cart">
@@ -51,7 +50,9 @@ export const NavigationBar = (props) => {
               />
               <span className="badge badge-danger ">1</span>
             </Link>
+
             <br />
+            <HumbergerMenu />
           </div>
         </nav>
       </header>
