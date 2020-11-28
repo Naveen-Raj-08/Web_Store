@@ -1106,22 +1106,25 @@ table > tr > #detail {
     grid-row-gap: 30px;
   }
   .Product {
-    width: 150px;
-    height: 250px;
+    width: 250px;
+    height: 350px;
     justify-self: center;
   }
   .Product-front,
   .Product-back {
-    width: 150px;
-    height: 250px;
+    width: 250px;
+    height: 350px;
     overflow: hidden;
     align-self: center;
   }
   .Product-back > h1 {
-    font-size: 18px;
+    font-size: 23px;
   }
   .Product-back > p {
-    font-size: 10px;
+    font-size: 15px;
+  }
+  .Product-back > .btn {
+    font-size: 15px;
   }
   .parallax > h1 {
     top: 100px;
