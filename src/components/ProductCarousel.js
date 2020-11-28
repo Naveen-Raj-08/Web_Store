@@ -12,7 +12,7 @@ import Item5 from "../images/Item5.jpg";
 import Item6 from "../images/Item6.jpg";
 
 const Responsive = {
-  0: { items: 1 },
+  300: { items: 2 },
   600: { items: 3 },
   1000: { items: 4 },
 };
@@ -26,8 +26,6 @@ export const ProductCarousel = () => {
         responsive={Responsive}
         touchTracking={true}
         touchMoveDefaultEvents={false}
-        paddingLeft="10"
-        paddingRight="10"
         disableButtonsControls={true}
         autoPlay={true}
         autoPlayInterval="1500"

@@ -18,7 +18,7 @@ export const HumbergerMenu = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/Product">Shop</Link>
+                <Link to="/Shop-Product">Shop</Link>
               </li>
               <li>
                 <Link to="/Cart">Cart</Link>

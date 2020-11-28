@@ -14,13 +14,7 @@ export const Card = (props) => {
   };
   return (
     <div className="card product-card">
-      <img
-        className="card-img-top"
-        src={Item.image}
-        width="200"
-        height="300"
-        alt="items"
-      />
+      <img className="card-img-top" src={Item.image} alt="items" />
       <div className="card-body details">
         <h4 className="card-title">{Item.title}</h4>
         <span>
