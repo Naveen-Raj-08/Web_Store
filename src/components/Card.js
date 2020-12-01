@@ -12,7 +12,7 @@ class Card extends Component {
   render() {
     let Item = this.props.Values;
     return (
-      <div className="card product-card">
+      <div className="product-card">
         <img className="card-img-top" src={Item.image} alt="items" />
         <div className="card-body details">
           <h4 className="card-title">{Item.title}</h4>

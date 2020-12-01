@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const ProductList = (props) => {
   return (
-    <div className="container">
+    <div>
       <div className="heading">
         <h1>Our Favorites</h1>
       </div>

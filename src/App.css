@@ -127,7 +127,7 @@
   text-decoration: none;
   letter-spacing: 0.15em;
   display: inline-block;
-  padding: 15px 20px;
+  padding: 15px 10px;
   position: relative;
 }
 .NavBar > .nav > ul > li > a:hover {
@@ -160,7 +160,6 @@
   border: none;
   background-color: transparent;
   color: white;
-  width: 250px;
   letter-spacing: 1px;
 }
 .NavBar > .nav > .cart {
@@ -361,7 +360,7 @@
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-areas: "Product Product Product";
-  grid-gap: 20px;
+  margin-left: 120px;
   padding: 10px 0px;
 }
 .Content {
@@ -442,14 +441,13 @@
 .Items {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-gap: 10px;
   padding: 10px 10px;
+  grid-gap: 10px;
 }
 .product-card {
   text-align: center;
   transition: 0.4s ease-in-out;
-  max-width: 100%;
-  width: 100%;
+  justify-self: center;
 }
 .product-card > img {
   max-width: 100%;
@@ -920,26 +918,27 @@ table > tr > #detail {
     margin: 40px 0px;
     padding: 0;
   }
-  .container {
-    margin: 0;
-    padding: 0;
-  }
+  /* .Items {
+    border: 1px solid black;
+  } */
   .Product-list {
+    margin: 5px 50px;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-areas: "Product Product Product";
+    grid-column-gap: 5px;
     grid-row-gap: 30px;
     padding: 10px 0px;
   }
   .Product {
-    width: 280px;
-    height: 380px;
+    width: 200px;
+    height: 300px;
     justify-self: center;
   }
   .Product-front,
   .Product-back {
-    width: 280px;
-    height: 380px;
+    width: 200px;
+    height: 300px;
     overflow: hidden;
     align-self: center;
   }
@@ -959,7 +958,7 @@ table > tr > #detail {
   .Product-back > .btn {
     font-size: 10px;
     padding: 5px 5px;
-    margin-top: 30px;
+    margin-top: 0px;
   }
   .NavBar > .nav > ul > li > form > input[type="search"] {
     width: 220px;
@@ -970,8 +969,21 @@ table > tr > #detail {
     text-align: center;
     padding: 0;
   }
-  .container {
-    padding: 0px;
+  .product-card {
+    width: fit-content;
+  }
+  .product-card > img {
+    max-width: 100%;
+    width: fit-content;
+    height: 300px;
+    align-self: center;
+  }
+  .item-card {
+    text-align: center;
+  }
+  .item-card > img {
+    width: 150px;
+    height: 200px;
   }
 }
 /* Tablet Portrait */
@@ -993,6 +1005,9 @@ table > tr > #detail {
   .Items {
     display: grid;
     grid-template-columns: 33% 33% 33%;
+  }
+  .product-card > img {
+    width: 300px;
   }
   .heading > h2 {
     margin-top: 100px;
@@ -1078,7 +1093,6 @@ table > tr > #detail {
   .Items {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-row: 20px;
   }
   .product-card > img {
     width: 150px;
