@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.32fdfd1d.chunk.css",
-    "main.js": "/static/js/main.906165e8.chunk.js",
-    "main.js.map": "/static/js/main.906165e8.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.32053151.js",
-    "runtime-main.js.map": "/static/js/runtime-main.32053151.js.map",
-    "static/css/2.dcbde98e.chunk.css": "/static/css/2.dcbde98e.chunk.css",
-    "static/js/2.36116e7a.chunk.js": "/static/js/2.36116e7a.chunk.js",
-    "static/js/2.36116e7a.chunk.js.map": "/static/js/2.36116e7a.chunk.js.map",
-    "static/js/3.d973c244.chunk.js": "/static/js/3.d973c244.chunk.js",
-    "static/js/3.d973c244.chunk.js.map": "/static/js/3.d973c244.chunk.js.map",
+    "main.css": "/static/css/main.9a4f9e9a.chunk.css",
+    "main.js": "/static/js/main.3d7a3a25.chunk.js",
+    "main.js.map": "/static/js/main.3d7a3a25.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7d0bd0c7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7d0bd0c7.js.map",
+    "static/css/2.68de2132.chunk.css": "/static/css/2.68de2132.chunk.css",
+    "static/js/2.b3eca25a.chunk.js": "/static/js/2.b3eca25a.chunk.js",
+    "static/js/2.b3eca25a.chunk.js.map": "/static/js/2.b3eca25a.chunk.js.map",
+    "static/js/3.776736b8.chunk.js": "/static/js/3.776736b8.chunk.js",
+    "static/js/3.776736b8.chunk.js.map": "/static/js/3.776736b8.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/2.dcbde98e.chunk.css.map": "/static/css/2.dcbde98e.chunk.css.map",
-    "static/css/main.32fdfd1d.chunk.css.map": "/static/css/main.32fdfd1d.chunk.css.map",
-    "static/js/2.36116e7a.chunk.js.LICENSE.txt": "/static/js/2.36116e7a.chunk.js.LICENSE.txt",
+    "static/css/2.68de2132.chunk.css.map": "/static/css/2.68de2132.chunk.css.map",
+    "static/css/main.9a4f9e9a.chunk.css.map": "/static/css/main.9a4f9e9a.chunk.css.map",
+    "static/js/2.b3eca25a.chunk.js.LICENSE.txt": "/static/js/2.b3eca25a.chunk.js.LICENSE.txt",
     "static/media/Advertisement.86f9afb7.jpg": "/static/media/Advertisement.86f9afb7.jpg",
     "static/media/Advertisement2.7b770143.jpg": "/static/media/Advertisement2.7b770143.jpg",
     "static/media/App.css": "/static/media/Roboto-Black.1224b64c.ttf",
     "static/media/Banner.1d21068d.mp4": "/static/media/Banner.1d21068d.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.32053151.js",
-    "static/css/2.dcbde98e.chunk.css",
-    "static/js/2.36116e7a.chunk.js",
-    "static/css/main.32fdfd1d.chunk.css",
-    "static/js/main.906165e8.chunk.js"
+    "static/js/runtime-main.7d0bd0c7.js",
+    "static/css/2.68de2132.chunk.css",
+    "static/js/2.b3eca25a.chunk.js",
+    "static/css/main.9a4f9e9a.chunk.css",
+    "static/js/main.3d7a3a25.chunk.js"
   ]
 }
