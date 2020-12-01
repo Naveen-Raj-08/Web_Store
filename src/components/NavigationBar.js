@@ -4,8 +4,9 @@ import MaterialIcon from "material-icons-react";
 import { Link } from "react-router-dom";
 import { ScrollBar } from "./ScrollBar";
 import { HumbergerMenu } from "./HumbergerMenu";
+import { connect } from "react-redux";
 
-export const NavigationBar = (props) => {
+const NavigationBar = (props) => {
   return (
     <div>
       <header className="NavBar">
@@ -48,7 +49,7 @@ export const NavigationBar = (props) => {
                 color="rgb(278, 278, 278)"
                 size="medium"
               />
-              <span className="badge badge-danger ">1</span>
+              <span className="badge badge-danger ">{props.cart.length}</span>
             </Link>
 
             <br />
@@ -59,3 +60,10 @@ export const NavigationBar = (props) => {
     </div>
   );
 };
+const mapStateToProps = (state) => {
+  return {
+    cart: state.cartState.ProductCart,
+  };
+};
+
+export default connect(mapStateToProps, null)(NavigationBar);

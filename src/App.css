@@ -38,11 +38,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-.container {
-  background-color: white;
-  margin: 0;
-  padding: 0;
-}
 .Header {
   text-align: center;
   background-color: rgb(247, 75, 75);
@@ -1088,6 +1083,9 @@ table > tr > #detail {
   .product-card > img {
     width: 150px;
     height: 200px;
+  }
+  .item-card {
+    text-align: center;
   }
   .item-card > img {
     width: 150px;

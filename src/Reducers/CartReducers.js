@@ -4,7 +4,6 @@ import { REMOVE_ITEMS } from "../Actions/Action";
 const InitialState = {
   ProductCart: [],
 };
-
 export const cartReducers = (state = InitialState, action) => {
   let cart = state.ProductCart;
   switch (action.type) {

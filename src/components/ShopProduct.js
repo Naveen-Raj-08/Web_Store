@@ -1,21 +1,21 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { connect } from "react-redux";
 
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { NavigationBar } from "./NavigationBar";
+import NavigationBar from "./NavigationBar";
 import Ad from "../images/Advertisement.jpg";
 import ProductData from "./Data";
-import { Card } from "./Card";
+import Card from "./Card";
 import { addToCart } from "../Actions/Action";
 import { ProductCarousel } from "./ProductCarousel";
 import Cart from "./Cart";
 
 const ShopProduct = (props) => {
   let Data = ProductData.Items;
-
-  const dispatch = useDispatch();
-  dispatch(addToCart(props.Items));
+  const addToCart = (Data) => {
+    props.AddToCart(Data);
+  };
 
   return (
     <div>
@@ -45,4 +45,19 @@ const ShopProduct = (props) => {
     </div>
   );
 };
-export default ShopProduct;
+
+const mapStateToProps = (state) => {
+  return {
+    product: state.productState.products,
+    cart: state.cartState.ProductCart,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    AddToCart: (product) => {
+      dispatch(addToCart(product));
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(ShopProduct);
